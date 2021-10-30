@@ -43,3 +43,7 @@ mv dir_1/file_2.json dir_1/dir_4
 14) Скопировать любые 2 файла, которые вы создали, в любую другую папку
 cp dir_1/file_1.txt dir_1/dir_5
 cp dir_1/file_2.txt dir_1/dir_5
+
+15) Найти файл по имени
+find . -name "file_1.json"
+
