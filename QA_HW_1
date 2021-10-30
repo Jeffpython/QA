@@ -5,3 +5,10 @@ pwd
 mkdir test
 
 3) Зайти в папку
+cd !$
+
+4) Создать 3 папки
+mkdir dir_1 dir_2 dir_3
+
+5) Зайти в любую папку
+cd d:/test2
