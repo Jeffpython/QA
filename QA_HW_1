@@ -37,12 +37,10 @@ Esc (переключиться в командный режим)
 cd ..
 
 13) Переместить любые 2 файла, которые вы создали, в любую другую папку
-mv dir_1/file_1.json dir_1/dir_4
-mv dir_1/file_2.json dir_1/dir_4
+mv dir_1/file_1.json dir_1/file_2.json dir_1/dir_4
 
 14) Скопировать любые 2 файла, которые вы создали, в любую другую папку
-cp dir_1/file_1.txt dir_1/dir_5
-cp dir_1/file_2.txt dir_1/dir_5
+cp dir_1/file_1.txt dir_1/file_2.txt dir_1/dir_5
 
 15) Найти файл по имени
 find . -name "file_1.json"
@@ -67,6 +65,7 @@ date
 curl "http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000"
 
 * 2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+cd d:
 touch script.txt
 vim script.txt
 
@@ -78,7 +77,6 @@ cd dir_1 # п. 5
 touch file_1.txt file_2.txt file_3.txt file_1.json file_2.json # п. 6
 mkdir dir_4 dir_5 dir_6 # п. 7
 ls # п. 8
-mv dir_1/file_1.json dir_1/dir_4 # п. 13
-mv dir_1/file_2.json dir_1/dir_4 # п. 13
+mv ./file_1.json ./file_2.json ./dir_4 # п. 13
 
 ./script.txt (запустить файл со скриптом)
