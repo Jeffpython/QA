@@ -72,6 +72,13 @@ vim script.txt
 
 Изменить содержимое файла:
 #!/bin/bash
-echo "Hello world!"
+cd test # п. 3
+mkdir dir_1 dir_2 dir_3 # п. 4
+cd dir_1 # п. 5
+touch file_1.txt file_2.txt file_3.txt file_1.json file_2.json # п. 6
+mkdir dir_4 dir_5 dir_6 # п. 7
+ls # п. 8
+mv dir_1/file_1.json dir_1/dir_4 # п. 13
+mv dir_1/file_2.json dir_1/dir_4 # п. 13
 
 ./script.txt (запустить файл со скриптом)
