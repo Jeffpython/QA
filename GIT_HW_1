@@ -14,7 +14,7 @@ mkdir dir_1 dir_2 dir_3
 cd dir_1
 
 6) Создать 5 файлов (3 txt, 2 json)
-touch file_1.txt file_2.txt file_3.txt file_1.json file_2.json
+touch {file_1,file_2,file_3}.txt {file_1,file_2}.json
 
 7) Создать 3 папки
 mkdir dir_4 dir_5 dir_6
