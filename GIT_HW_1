@@ -43,7 +43,7 @@ mv dir_1/{file_1.json,file_2.json} dir_1/dir_4
 cp dir_1/{file_1.txt,file_2.txt} dir_1/dir_5
 
 15) Найти файл по имени
-find . -name "file_1.json"
+find . -name file_1.json
 
 16) Просмотреть содержимое в реальном времени
 tail -f dir_1/file_1.txt
