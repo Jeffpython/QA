@@ -31,7 +31,9 @@ touch bug_report.txt
 отразить в bug_report.txt структуру баг репорта
 
 4. Запушить структуру багрепорта на внешний репозиторий
-
+git add .
+git commit -m "added bug_report.txt"
+git push origin bug_reports
 
 5. Вмержить ветку Bag Reports в Main
 6. Запушить main на внешний репозиторий.
