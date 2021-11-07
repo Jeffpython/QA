@@ -48,5 +48,14 @@ touch checklist.txt
 отразить в checklist.txt структуру чек листа
 
 8. Запушить структуру на внешний репозиторий
+git add .
+git commit -m "added checklist.txt"
+git push origin checklists
+
 9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+Выполнить Pull Request в web-интерфейсе github
+
 10. Синхронизировать Внешнюю и Локальную ветки Main
+git checkout master
+git pull
+Выйти из текстового редактора - Ctrl + z, сохранить изменения - Y
