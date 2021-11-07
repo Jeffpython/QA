@@ -40,6 +40,8 @@ git checkout master
 git merge bug_reports
 
 6. Запушить main на внешний репозиторий.
+
+
 7. В ветке CheckLists набросать структуру чек листа.
 8. Запушить структуру на внешний репозиторий
 9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
