@@ -17,13 +17,7 @@ git branch mobile_testing
 
 2. Запушить все ветки на внешний репозиторий
 
-git push origin postman
-git push origin jmeter
-git push origin checklists
-git push origin bug_reports
-git push origin sql
-git push origin charles
-git push origin mobile_testing
+git push --all
 
 3. В ветке Bug Reports сделать текстовый документ со структурой баг репорта
 git checkout bug_reports
