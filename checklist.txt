@@ -1,1 +1,1 @@
-checklist structure
+bug report structure
