@@ -45,7 +45,7 @@ JOIN roles r ON r.id = re.role_id
 
 -- 7. Вывести имена и должность только Java разработчиков
 
-SELECT e.employee_name, r.role_name 
+SELECT e.employee_name, r.role_name
 FROM roles_employee re 
 JOIN employees e ON e.id = re.employee_id 
 JOIN roles r ON r.id = re.role_id 
@@ -60,7 +60,7 @@ WHERE r.role_name LIKE '%Python developer'
 
 -- 9. Вывести имена и должность всех QA инженеров
 
-SELECT e.employee_name, r.role_name 
+SELECT e.employee_name, r.role_name
 FROM roles_employee re 
 JOIN employees e ON e.id = re.employee_id 
 JOIN roles r ON r.id = re.role_id 
@@ -88,8 +88,8 @@ SELECT e.employee_name, s.monthly_salary
 FROM roles_employee re
 JOIN roles r ON r.id = re.role_id 
 JOIN employees e ON e.id = re.employee_id 
-JOIN employee_salary es ON es.employee_id = re.employee_id 
-JOIN salary s ON s.id = es.salary_id
+LEFT JOIN employee_salary es ON es.employee_id = re.employee_id 
+LEFT JOIN salary s ON s.id = es.salary_id
 WHERE r.role_name LIKE 'Junior%'
 
 -- 13. Вывести имена и зарплаты Middle специалистов
@@ -98,8 +98,8 @@ SELECT e.employee_name, s.monthly_salary
 FROM roles_employee re 
 JOIN employees e ON e.id = re.employee_id
 JOIN roles r ON r.id = re.role_id 
-JOIN employee_salary es ON es.employee_id = re.employee_id 
-JOIN salary s ON s.id = es.salary_id
+LEFT JOIN employee_salary es ON es.employee_id = re.employee_id 
+LEFT JOIN salary s ON s.id = es.salary_id
 WHERE r.role_name LIKE 'Middle%'
 
 -- 14. Вывести имена и зарплаты Senior специалистов
@@ -108,8 +108,8 @@ SELECT e.employee_name, s.monthly_salary
 FROM roles_employee re 
 JOIN employees e ON e.id = re.employee_id
 JOIN roles r ON r.id = re.role_id 
-JOIN employee_salary es ON es.employee_id = re.employee_id 
-JOIN salary s ON s.id = es.salary_id
+LEFT JOIN employee_salary es ON es.employee_id = re.employee_id 
+LEFT JOIN salary s ON s.id = es.salary_id
 WHERE r.role_name LIKE 'Senior%' 
 
 -- 15. Вывести зарплаты Java разработчиков
@@ -117,8 +117,8 @@ WHERE r.role_name LIKE 'Senior%'
 SELECT s.monthly_salary
 FROM roles_employee re 
 JOIN roles r ON r.id = re.role_id 
-JOIN employee_salary es ON es.employee_id = re.employee_id 
-JOIN salary s ON s.id = es.salary_id
+LEFT JOIN employee_salary es ON es.employee_id = re.employee_id 
+LEFT JOIN salary s ON s.id = es.salary_id
 WHERE r.role_name LIKE '%Java developer'
 
 -- 16. Вывести зарплаты Python разработчиков
@@ -126,8 +126,8 @@ WHERE r.role_name LIKE '%Java developer'
 SELECT s.monthly_salary
 FROM roles_employee re 
 JOIN roles r ON r.id = re.role_id 
-JOIN employee_salary es ON es.employee_id = re.employee_id 
-JOIN salary s ON s.id = es.salary_id
+LEFT JOIN employee_salary es ON es.employee_id = re.employee_id 
+LEFT JOIN salary s ON s.id = es.salary_id
 WHERE r.role_name LIKE '%Python developer'
 
 -- 17. Вывести имена и зарплаты Junior Python разработчиков
@@ -210,8 +210,6 @@ WHERE r.role_name LIKE '%QA engineer'
 SELECT count(r.id)
 FROM roles_employee re 
 JOIN roles r ON r.id = re.role_id
-JOIN employee_salary es ON es.employee_id = re.employee_id
-JOIN salary s ON s.id = es.salary_id
 WHERE r.role_name LIKE '%QA engineer'
 
 -- 26. Вывести количество Middle специалистов
@@ -219,8 +217,6 @@ WHERE r.role_name LIKE '%QA engineer'
 SELECT count(r.id)
 FROM roles_employee re 
 JOIN roles r ON r.id = re.role_id
-JOIN employee_salary es ON es.employee_id = re.employee_id
-JOIN salary s ON s.id = es.salary_id
 WHERE r.role_name LIKE 'Middle%'
 
 -- 27. Вывести количество разработчиков
@@ -228,8 +224,6 @@ WHERE r.role_name LIKE 'Middle%'
 SELECT count(r.id)
 FROM roles_employee re 
 JOIN roles r ON r.id = re.role_id
-JOIN employee_salary es ON es.employee_id = re.employee_id
-JOIN salary s ON s.id = es.salary_id
 WHERE r.role_name LIKE '%developer'
 
 -- 28. Вывести фонд (сумму) зарплаты разработчиков
@@ -247,8 +241,8 @@ SELECT e.employee_name, r.role_name, s.monthly_salary
 FROM roles_employee re 
 JOIN employees e ON e.id = re.employee_id 
 JOIN roles r ON r.id = re.role_id 
-JOIN employee_salary es ON es.employee_id = re.employee_id 
-JOIN salary s ON s.id = es.salary_id
+LEFT JOIN employee_salary es ON es.employee_id = re.employee_id 
+LEFT JOIN salary s ON s.id = es.salary_id
 ORDER BY s.monthly_salary
 
 -- 30. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП от 1700 до 2300
