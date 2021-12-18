@@ -68,7 +68,7 @@
 							"});\r",
 							"\r",
 							"pm.test(\"5. Проверить, что age в ответе равно age s request (age вбить руками)\", function () {\r",
-							"    pm.expect(jsonData.age).to.eql(\"40\");\r",
+							"    pm.expect(jsonData.age).to.eql(\"30\");\r",
 							"});\r",
 							"\r",
 							"pm.test(\"6. Проверить, что salary в ответе равно salary s request (salary вбить руками)\", function () {\r",
@@ -116,7 +116,7 @@
 						},
 						{
 							"key": "age",
-							"value": "40",
+							"value": "30",
 							"type": "text"
 						},
 						{
@@ -206,7 +206,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/object_info_3?name=Jeff&age=40&salary=650",
+					"raw": "http://162.55.220.72:5005/object_info_3?name=Jeff&age=30&salary=650",
 					"protocol": "http",
 					"host": [
 						"162",
@@ -225,7 +225,7 @@
 						},
 						{
 							"key": "age",
-							"value": "40"
+							"value": "30"
 						},
 						{
 							"key": "salary",
@@ -300,7 +300,7 @@
 							"// 20. Передать в окружение переменную salary\r",
 							"\r",
 							"var inv_name = pm.environment.set(\"name\", \"Jeff\")\r",
-							"var inv_age = pm.environment.set(\"age\", 40)\r",
+							"var inv_age = pm.environment.set(\"age\", 30)\r",
 							"var inv_salary = pm.environment.set(\"salary\", 650)\r",
 							"\r",
 							"// 21. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary\r",
@@ -316,7 +316,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/object_info_4?name=Jeff&age=40&salary=650",
+					"raw": "http://162.55.220.72:5005/object_info_4?name=Jeff&age=30&salary=650",
 					"protocol": "http",
 					"host": [
 						"162",
@@ -335,7 +335,7 @@
 						},
 						{
 							"key": "age",
-							"value": "40"
+							"value": "30"
 						},
 						{
 							"key": "salary",

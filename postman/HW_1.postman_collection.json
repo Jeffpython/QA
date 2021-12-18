@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/get_method?name=Jeff&age=40",
+					"raw": "http://162.55.220.72:5005/get_method?name=Jeff&age=30",
 					"protocol": "http",
 					"host": [
 						"162",
@@ -30,7 +30,7 @@
 						},
 						{
 							"key": "age",
-							"value": "40"
+							"value": "30"
 						}
 					]
 				}
@@ -52,7 +52,7 @@
 						},
 						{
 							"key": "age",
-							"value": "40",
+							"value": "30",
 							"type": "text"
 						},
 						{
@@ -84,7 +84,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "162.55.220.72:5005/object_info_1?name=Jeff&age=40&weight=70",
+					"raw": "162.55.220.72:5005/object_info_1?name=Jeff&age=30&weight=70",
 					"host": [
 						"162",
 						"55",
@@ -102,7 +102,7 @@
 						},
 						{
 							"key": "age",
-							"value": "40"
+							"value": "30"
 						},
 						{
 							"key": "weight",
@@ -119,7 +119,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "162.55.220.72:5005/object_info_2?name=Jeff&age=40&salary=500",
+					"raw": "162.55.220.72:5005/object_info_2?name=Jeff&age=30&salary=500",
 					"host": [
 						"162",
 						"55",
@@ -137,7 +137,7 @@
 						},
 						{
 							"key": "age",
-							"value": "40"
+							"value": "30"
 						},
 						{
 							"key": "salary",
@@ -154,7 +154,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "162.55.220.72:5005/object_info_3?name=Jeff&age=40&salary=500",
+					"raw": "162.55.220.72:5005/object_info_3?name=Jeff&age=30&salary=500",
 					"host": [
 						"162",
 						"55",
@@ -172,7 +172,7 @@
 						},
 						{
 							"key": "age",
-							"value": "40"
+							"value": "30"
 						},
 						{
 							"key": "salary",
@@ -189,7 +189,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "162.55.220.72:5005/object_info_4?name=Jeff&age=40&salary=500",
+					"raw": "162.55.220.72:5005/object_info_4?name=Jeff&age=30&salary=500",
 					"host": [
 						"162",
 						"55",
@@ -207,7 +207,7 @@
 						},
 						{
 							"key": "age",
-							"value": "40"
+							"value": "30"
 						},
 						{
 							"key": "salary",
@@ -233,7 +233,7 @@
 						},
 						{
 							"key": "age",
-							"value": "40",
+							"value": "30",
 							"type": "text"
 						},
 						{
