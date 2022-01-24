@@ -5,7 +5,7 @@ IP: 162.55.220.72
 Port: 5005
 
 Task:
-Сфокусироваться на вышеперечисленных запросах
+- Сфокусироваться на вышеперечисленных запросах.
 
 Execution:
 - В Postman создать Environment "Charles" и создать переменную окружения url = "http://162.55.220.72:5005/"
@@ -27,14 +27,15 @@ Response:
 ]
 
 Task:
-Сделать и в Rewrite, и в BreakPoint (можно отключить, чтобы не стопило на каждом запросе).
-Подменить url в Charles, чтобы в запросе ушло имя, которые вы вписали в Postman, а вернулось то, которое вы подставили в Charles.
+- Сделать и в Rewrite, и в BreakPoint (можно отключить, чтобы не стопило на каждом запросе).
+- Подменить url в Charles, чтобы в запросе ушло имя, которые вы вписали в Postman, а вернулось то, которое вы подставили в Charles.
  
 Execution:
 - В Postman создать request со следующими значениями:
 	- method: GET
 	- url: {{url}}get_method?name=Jeff&age=30
 	- query params: name - Jeff, age - 30
+
 - В Charles создать Rewrite со следующими параметрами:
 	Location:
 	- protocol: http
@@ -46,13 +47,69 @@ Execution:
 	- Type: Modify Query Param
 	- Match: Name - name, Value - Jeff
 	- Replace: Name - name, Value - Tom
-- Выполнить запрос в Postman	
+- Выполнить запрос в Postman
+
 - В Charles создать breakpoint со следующими параметрами:
-	scheme - GET,
-	protocol - http,
-	host - 162.55.220.72,
-	port - 5005,
-	path - /get_method,
-	query - name=Jeff&age=30
+	- scheme: GET
+	- protocol: http
+	- host: 162.55.220.72
+	- port: 5005
+	- path: /get_method
+	- query: name=Jeff&age=30
+	- Response
 - Выполнить запрос в Postman
 - В Charles в response выполнить замену значения "Jeff" на "Tom"
+
+----------
+
+Ex_2:
+
+Method: POST
+EndPoint: /user_info_3
+Request form-data: 
+- name: str
+- age: int
+- salary: int
+
+Response:
+{
+	'name': name,
+	'age': age,
+	'salary': salary,
+	'family': {
+		'children': [['Alex', 24], ['Kate', 12]],
+		'u_salary_1_5_year': salary * 4
+	}
+}
+
+Task:
+- Сделать и в Rewrite, и в BreakPoint (можно отключить, чтобы не стопило на каждом запросе).
+- Подменить body в Charles так, чтобы в запросе ушла salary, которую вы вписали в Postman, а в u_salary_1_5_year цифра вернулась меньше оригинальной из запроса.
+
+Execution:
+- В Postman создать request со следующими значениями:
+	- method: POST
+	- url: {{url}}user_info_3
+	- body form-data: name - Jeff, age - 30, salary - 40000
+
+- В Charles создать Rewrite со следующими параметрами:
+	Location:
+	- protocol: http
+	- host: 162.55.220.72
+	- port: 5005
+	- path: /user_info_3
+	Rewrite Rule:
+	- Type: Body
+	- Match: Value - 160000
+	- Replace: Value - 10000
+- Выполнить запрос в Postman
+
+- В Charles создать breakpoint со следующими параметрами:
+	- scheme: POST
+	- protocol: http
+	- host: 162.55.220.72
+	- port: 5005
+	- path: /user_info_3
+	- Response
+- Выполнить запрос в Postman
+- В Charles в response выполнить замену значениe параметра u_salary_1_5_year с "160000" на "10000"
